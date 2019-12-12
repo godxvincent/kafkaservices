@@ -2,7 +2,9 @@ package com.godxvincent.kafkaservices.producers;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,8 @@ public class Producer {
 
     public void sendMessage(String message) {
         logger.info(String.format("#### -> Producing message -> %s", message));
+        //this.setNewTopic();
         this.kafkaTemplate.send(TOPIC, message);
     }
+    
 }
