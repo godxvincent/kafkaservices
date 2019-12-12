@@ -22,5 +22,5 @@ public class Producer {
         //this.setNewTopic();
         this.kafkaTemplate.send(TOPIC, message);
     }
-    
+
 }
