@@ -1,8 +1,8 @@
-package com.godxvincent.kafkaservices.repository;
-
-import com.godxvincent.kafkaservices.models.Emisor;
+package com.bvc.arquitectura.kafkaservices.repository;
 
 import java.util.List;
+
+import com.bvc.arquitectura.kafkaservices.models.Emisor;
 
 public interface EmisorRepository {
 

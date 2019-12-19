@@ -1,11 +1,12 @@
-package com.godxvincent.kafkaservices.db2connection;
+package com.bvc.arquitectura.kafkaservices.db2connection;
 
-import com.godxvincent.kafkaservices.models.Emisor;
-import com.godxvincent.kafkaservices.repository.EmisorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+
+import com.bvc.arquitectura.kafkaservices.models.Emisor;
+import com.bvc.arquitectura.kafkaservices.repository.EmisorRepository;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;

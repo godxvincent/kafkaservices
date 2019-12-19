@@ -1,4 +1,4 @@
-package com.godxvincent.kafkaservices.models;
+package com.bvc.arquitectura.kafkaservices.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

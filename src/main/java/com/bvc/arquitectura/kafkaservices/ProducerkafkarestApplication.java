@@ -1,4 +1,4 @@
-package com.godxvincent.kafkaservices;
+package com.bvc.arquitectura.kafkaservices;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

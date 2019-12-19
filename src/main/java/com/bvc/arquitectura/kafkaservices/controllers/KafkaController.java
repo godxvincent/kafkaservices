@@ -1,7 +1,5 @@
-package com.godxvincent.kafkaservices.controllers;
+package com.bvc.arquitectura.kafkaservices.controllers;
 
-import com.godxvincent.kafkaservices.models.Emisor;
-import com.godxvincent.kafkaservices.repository.EmisorRepository;
 import org.apache.commons.logging.Log;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +9,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.kafka.listener.LoggingErrorHandler;
 import org.springframework.web.bind.annotation.*;
 
-import com.godxvincent.kafkaservices.producers.Producer;
+import com.bvc.arquitectura.kafkaservices.models.Emisor;
+import com.bvc.arquitectura.kafkaservices.producers.Producer;
+import com.bvc.arquitectura.kafkaservices.repository.EmisorRepository;
 
 import java.util.List;
 

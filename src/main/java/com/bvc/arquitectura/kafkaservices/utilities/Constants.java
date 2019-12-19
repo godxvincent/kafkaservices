@@ -1,4 +1,4 @@
-package com.godxvincent.kafkaservices.utilities;
+package com.bvc.arquitectura.kafkaservices.utilities;
 
 public class Constants {
 

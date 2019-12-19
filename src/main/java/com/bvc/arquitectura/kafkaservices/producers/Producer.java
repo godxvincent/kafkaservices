@@ -1,6 +1,5 @@
-package com.godxvincent.kafkaservices.producers;
+package com.bvc.arquitectura.kafkaservices.producers;
 
-import com.godxvincent.kafkaservices.utilities.Constants;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.kafka.clients.admin.NewTopic;
@@ -8,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
+
+import com.bvc.arquitectura.kafkaservices.utilities.Constants;
 
 @Service
 public class Producer {
