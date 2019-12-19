@@ -1,17 +1,21 @@
 package com.godxvincent.kafkaservices.models;
 
-import java.sql.Timestamp;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
-//TODO actualizar los atributos de acuerdo a la tabla de DB2
+@Entity
 public class Emisor {
 
+    @Id
+    @GeneratedValue
     private Integer emisoresId;
 
     private String emisoresIsin;
 
     private String emisoresDoc;
 
-    private Integer emisoresPais;
+    private String emisoresPais;
 
     private Integer emisoresOfic;
 
@@ -27,19 +31,19 @@ public class Emisor {
 
     private String emisoresFecret;
 
-    private String emisoresNivcon;
+    private Integer emisoresNumterm;
 
-    private String emisoresNumterm;
+    private String emisoresNivcon;
 
     private String emisoresEstado;
 
     private String emisoresNomrl;
 
-    private String emisoresRazonsocial;
+    private String emisoresRazonsoc;
 
-    private String emisoresDiremi;
+    private String emisoresDirEmi;
 
-    private String  emisoresDiremail;
+    private String  emisoresDirEmail;
 
     private String emisoresFecont;
 
@@ -63,11 +67,10 @@ public class Emisor {
 
     private String emisoresCodemisin;
 
-
     public Emisor() {
     }
 
-    public Emisor(Integer emisoresId, String emisoresIsin, String emisoresDoc, Integer emisoresPais, Integer emisoresOfic, Integer emisoresDep, String emisoresCiudad, String emisoresNumident, String emisoresNemo, String emisoresFecvin, String emisoresFecret, String emisoresNivcon, String emisoresNumterm, String emisoresEstado, String emisoresNomrl, String emisoresRazonsocial, String emisoresDiremi, String emisoresDiremail, String emisoresFecont, String emisoresNumcont, String emisoresRefcont, String emisoresFecafil, String emisoresTipcob, String emisoresFecint, String emisoresFecreg, String emisoresFecgrab, String emisoresUsugrab, String emisoresVengrab, String emisoresCodemisin) {
+    public Emisor(Integer emisoresId, String emisoresIsin, String emisoresDoc, String emisoresPais, Integer emisoresOfic, Integer emisoresDep, String emisoresCiudad, String emisoresNumident, String emisoresNemo, String emisoresFecvin, String emisoresFecret, Integer emisoresNumterm, String emisoresNivcon, String emisoresEstado, String emisoresNomrl, String emisoresRazonsoc, String emisoresDirEmi, String emisoresDirEmail, String emisoresFecont, String emisoresNumcont, String emisoresRefcont, String emisoresFecafil, String emisoresTipcob, String emisoresFecint, String emisoresFecreg, String emisoresFecgrab, String emisoresUsugrab, String emisoresVengrab, String emisoresCodemisin) {
         this.emisoresId = emisoresId;
         this.emisoresIsin = emisoresIsin;
         this.emisoresDoc = emisoresDoc;
@@ -79,13 +82,13 @@ public class Emisor {
         this.emisoresNemo = emisoresNemo;
         this.emisoresFecvin = emisoresFecvin;
         this.emisoresFecret = emisoresFecret;
-        this.emisoresNivcon = emisoresNivcon;
         this.emisoresNumterm = emisoresNumterm;
+        this.emisoresNivcon = emisoresNivcon;
         this.emisoresEstado = emisoresEstado;
         this.emisoresNomrl = emisoresNomrl;
-        this.emisoresRazonsocial = emisoresRazonsocial;
-        this.emisoresDiremi = emisoresDiremi;
-        this.emisoresDiremail = emisoresDiremail;
+        this.emisoresRazonsoc = emisoresRazonsoc;
+        this.emisoresDirEmi = emisoresDirEmi;
+        this.emisoresDirEmail = emisoresDirEmail;
         this.emisoresFecont = emisoresFecont;
         this.emisoresNumcont = emisoresNumcont;
         this.emisoresRefcont = emisoresRefcont;
@@ -97,9 +100,6 @@ public class Emisor {
         this.emisoresUsugrab = emisoresUsugrab;
         this.emisoresVengrab = emisoresVengrab;
         this.emisoresCodemisin = emisoresCodemisin;
-    }
-
-    public Emisor(long emisoresId, Timestamp emisoresFecint ) {
     }
 
     public Integer getEmisoresId() {
@@ -126,11 +126,11 @@ public class Emisor {
         this.emisoresDoc = emisoresDoc;
     }
 
-    public Integer getEmisoresPais() {
+    public String getEmisoresPais() {
         return emisoresPais;
     }
 
-    public void setEmisoresPais(Integer emisoresPais) {
+    public void setEmisoresPais(String emisoresPais) {
         this.emisoresPais = emisoresPais;
     }
 
@@ -190,20 +190,20 @@ public class Emisor {
         this.emisoresFecret = emisoresFecret;
     }
 
+    public Integer getEmisoresNumterm() {
+        return emisoresNumterm;
+    }
+
+    public void setEmisoresNumterm(Integer emisoresNumterm) {
+        this.emisoresNumterm = emisoresNumterm;
+    }
+
     public String getEmisoresNivcon() {
         return emisoresNivcon;
     }
 
     public void setEmisoresNivcon(String emisoresNivcon) {
         this.emisoresNivcon = emisoresNivcon;
-    }
-
-    public String getEmisoresNumterm() {
-        return emisoresNumterm;
-    }
-
-    public void setEmisoresNumterm(String emisoresNumterm) {
-        this.emisoresNumterm = emisoresNumterm;
     }
 
     public String getEmisoresEstado() {
@@ -222,28 +222,28 @@ public class Emisor {
         this.emisoresNomrl = emisoresNomrl;
     }
 
-    public String getEmisoresRazonsocial() {
-        return emisoresRazonsocial;
+    public String getEmisoresRazonsoc() {
+        return emisoresRazonsoc;
     }
 
-    public void setEmisoresRazonsocial(String emisoresRazonsocial) {
-        this.emisoresRazonsocial = emisoresRazonsocial;
+    public void setEmisoresRazonsoc(String emisoresRazonsoc) {
+        this.emisoresRazonsoc = emisoresRazonsoc;
     }
 
-    public String getEmisoresDiremi() {
-        return emisoresDiremi;
+    public String getEmisoresDirEmi() {
+        return emisoresDirEmi;
     }
 
-    public void setEmisoresDiremi(String emisoresDiremi) {
-        this.emisoresDiremi = emisoresDiremi;
+    public void setEmisoresDirEmi(String emisoresDirEmi) {
+        this.emisoresDirEmi = emisoresDirEmi;
     }
 
-    public String getEmisoresDiremail() {
-        return emisoresDiremail;
+    public String getEmisoresDirEmail() {
+        return emisoresDirEmail;
     }
 
-    public void setEmisoresDiremail(String emisoresDiremail) {
-        this.emisoresDiremail = emisoresDiremail;
+    public void setEmisoresDirEmail(String emisoresDirEmail) {
+        this.emisoresDirEmail = emisoresDirEmail;
     }
 
     public String getEmisoresFecont() {
@@ -332,5 +332,40 @@ public class Emisor {
 
     public void setEmisoresCodemisin(String emisoresCodemisin) {
         this.emisoresCodemisin = emisoresCodemisin;
+    }
+
+    @Override
+    public String toString() {
+        return "Emisor{" +
+                "emisoresId=" + emisoresId +
+                ", emisoresIsin='" + emisoresIsin + '\'' +
+                ", emisoresDoc='" + emisoresDoc + '\'' +
+                ", emisoresPais='" + emisoresPais + '\'' +
+                ", emisoresOfic=" + emisoresOfic +
+                ", emisoresDep=" + emisoresDep +
+                ", emisoresCiudad='" + emisoresCiudad + '\'' +
+                ", emisoresNumident='" + emisoresNumident + '\'' +
+                ", emisoresNemo='" + emisoresNemo + '\'' +
+                ", emisoresFecvin='" + emisoresFecvin + '\'' +
+                ", emisoresFecret='" + emisoresFecret + '\'' +
+                ", emisoresNumterm=" + emisoresNumterm +
+                ", emisoresNivcon='" + emisoresNivcon + '\'' +
+                ", emisoresEstado='" + emisoresEstado + '\'' +
+                ", emisoresNomrl='" + emisoresNomrl + '\'' +
+                ", emisoresRazonsoc='" + emisoresRazonsoc + '\'' +
+                ", emisoresDirEmi='" + emisoresDirEmi + '\'' +
+                ", emisoresDirEmail='" + emisoresDirEmail + '\'' +
+                ", emisoresFecont='" + emisoresFecont + '\'' +
+                ", emisoresNumcont='" + emisoresNumcont + '\'' +
+                ", emisoresRefcont='" + emisoresRefcont + '\'' +
+                ", emisoresFecafil='" + emisoresFecafil + '\'' +
+                ", emisoresTipcob='" + emisoresTipcob + '\'' +
+                ", emisoresFecint='" + emisoresFecint + '\'' +
+                ", emisoresFecreg='" + emisoresFecreg + '\'' +
+                ", emisoresFecgrab='" + emisoresFecgrab + '\'' +
+                ", emisoresUsugrab='" + emisoresUsugrab + '\'' +
+                ", emisoresVengrab='" + emisoresVengrab + '\'' +
+                ", emisoresCodemisin='" + emisoresCodemisin + '\'' +
+                '}';
     }
 }
